@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   onSubmit(data) {
-    fetch("/sw/colors/" + data.query)
+    fetch("/colors/" + data.query)
       .then(res => res.json())
       .then(data => this.setState({ results: data.results }));
   }

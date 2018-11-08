@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "../../dist")));
 
 app.use("/sw", indexRouter);
-app.use("/sw/colors", colorsRouter);
+app.use("/colors", colorsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
