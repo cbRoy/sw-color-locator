@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "../../dist")));
 
-app.use("/", indexRouter);
+app.use("/sw", indexRouter);
 app.use("/colors", colorsRouter);
 
 // catch 404 and forward to error handler
