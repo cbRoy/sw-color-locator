@@ -1,0 +1,39 @@
+{
+  "name": "form-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "webpack-dev-server --mode development --open",
+    "dev-server": "PORT=3001 nodemon src/server/bin/www",
+    "server": "nodemon src/server/bin/www",
+    "start": "concurrently \"npm run dev-server\" \"npm run client\"",
+    "build": "webpack --mode production",
+    "b2": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.19",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "concurrently": "^3.6.1",
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-hot-loader": "^4.3.3"
+  }
+}
